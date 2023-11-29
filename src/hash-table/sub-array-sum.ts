@@ -17,5 +17,3 @@ export default function subArraySum(sums: number[], k: number) {
 
   return count
 }
-
-subArraySum([1, 1, 1], 2)
