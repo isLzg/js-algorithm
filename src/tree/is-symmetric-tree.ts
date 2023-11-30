@@ -1,6 +1,6 @@
-import ThreeNode from "./base";
+import TreeNode from "./base";
 
-const dfs = (left: ThreeNode | null, right: ThreeNode | null): boolean => {
+const dfs = (left: TreeNode | null, right: TreeNode | null): boolean => {
   if (left === null && right === null) return true
   if (left === null || right === null) return false
   if (left.value !== right.value) return false
@@ -9,7 +9,7 @@ const dfs = (left: ThreeNode | null, right: ThreeNode | null): boolean => {
   return dfs(left.left, right.right) && dfs(left.right, right.left)
 }
 
-export default function isSymmetricTree(tree: ThreeNode): boolean {
+export default function isSymmetricTree(tree: TreeNode): boolean {
   if (!tree) return true
   return dfs(tree.left, tree.right)
 }

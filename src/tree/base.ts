@@ -1,9 +1,9 @@
-export default class ThreeNode {
+export default class TreeNode {
   value: number
-  left: ThreeNode | null
-  right: ThreeNode | null
+  left: TreeNode | null
+  right: TreeNode | null
 
-  constructor(value?: number, left?: ThreeNode, right?: ThreeNode) {
+  constructor(value?: number, left?: TreeNode, right?: TreeNode) {
     this.value = value === undefined ? 0 : value
     this.left = left === undefined ? null : left
     this.right = right === undefined ? null : right
